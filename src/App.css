@@ -1,0 +1,6 @@
+.App {
+  text-align: center;
+  padding: 20px; /* Add padding around the content */
+  background-color: #f0f0f0; /* Light background color */
+  min-height: 100vh; /* Ensure it takes full height */
+}
