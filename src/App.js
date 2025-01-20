@@ -12,25 +12,26 @@ import Services from './components/Services';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 
-
 const App = () => {
     return (
         <Router>
-            <div>
+            <div className="flex flex-col min-h-screen"> {/* Ensure full height for layout */}
                 <Navbar />
-                {/* Define routes */}
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/welcomesection" element={<WelcomeSection />} />
-                    <Route path="/testimonials" element={<Testimonials />} />
-                    <Route path="/projects" element={<Projects />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/experience" element={<Experience />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/services" element={<Services />} />
-                    <Route path="/skills" element={<Skills />} />
-                    <Route path="/footer" element={<Footer />} />
-                </Routes>
+                <main className="flex-grow"> {/* Allow main content to grow and push footer down */}
+                    {/* Define routes */}
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/welcomesection" element={<WelcomeSection />} />
+                        <Route path="/testimonials" element={<Testimonials />} />
+                        <Route path="/projects" element={<Projects />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/experience" element={<Experience />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/services" element={<Services />} />
+                        <Route path="/skills" element={<Skills />} />
+                    </Routes>
+                </main>
+                <Footer /> {/* Footer will always be at the bottom */}
             </div>
         </Router>
     );
